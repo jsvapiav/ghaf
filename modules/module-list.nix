@@ -15,4 +15,5 @@
   ./users/accounts.nix
   ./version
   ./windows-launcher
+  ./dci
 ]
