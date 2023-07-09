@@ -4,6 +4,7 @@
   self,
   microvm,
   netvm,
+  dockervm,
 }: {
   lib,
   pkgs,
@@ -19,7 +20,7 @@
 
     # TODO Refactor the microvm to be fully declarative
     # SEE https://astro.github.io/microvm.nix/declarative.html
-    (import ../virtualization/microvm/microvm-host.nix {inherit self microvm netvm;})
+    (import ../virtualization/microvm/microvm-host.nix {inherit self microvm netvm dockervm;})
     ./networking.nix
 
     {

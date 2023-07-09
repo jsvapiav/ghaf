@@ -37,7 +37,7 @@ in
           isNormalUser = true;
           password = cfg.password;
           #TODO add "docker" use "lib.optionals"
-          extraGroups = ["wheel" "video"];
+          extraGroups = ["wheel" "video" "docker"];
         };
         groups."${cfg.user}" = {
           name = cfg.user;

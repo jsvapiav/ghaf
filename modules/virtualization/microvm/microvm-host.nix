@@ -4,6 +4,7 @@
   self,
   microvm,
   netvm,
+  dockervm,
 }: {
   config,
   lib,
@@ -27,5 +28,11 @@ in
         flake = self;
         autostart = true;
       };
+
+      microvm.vms."${dockervm}" = {
+        flake = self;
+        autostart = true;
+      };
+
     };
   }
